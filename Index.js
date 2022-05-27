@@ -1,4 +1,3 @@
-/*Save this as Index.js*/
 const statusDisplay = document.querySelector('.status');
 
 let gameActive = true;
@@ -7,7 +6,7 @@ let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage = () => `Winner : Player ${currentPlayer}!`;
 const drawMessage = () => `Draw!`;
-const currentPlayerTurn = () => `Mechanics: It's your turn Player ${currentPlayer}.`;
+const currentPlayerTurn = () => `Current turn by player: ${currentPlayer}.`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
@@ -68,7 +67,7 @@ function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
 
 
-    const clickedCellIndex = parseInt(clickedCell.getAttribute('tile'));
+    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
 
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
         return;
