@@ -20,6 +20,8 @@ body {
 }
 
 h3 {
+    margin-top: 0;
+    margin-bottom: 0;
     color: var(--textColor);
     border-color: var(--foregroundColor);
     font-size: 100px;
