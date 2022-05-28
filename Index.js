@@ -47,7 +47,8 @@ function handleResultValidation() {
                 function (cell) {
                     const cellIndex = parseInt(cell.getAttribute('data-cell-index'));
                     if (winCondition.includes(cellIndex)) {
-                        cell.style.backgroundColor = "red";
+                        cell.style.backgroundColor = "#2a1c53";
+                        cell.style.color = "white";
                         cell.style.transition = "all 1s";
                     };
                 }
