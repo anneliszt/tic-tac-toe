@@ -4,9 +4,9 @@ let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `Winner : Player ${currentPlayer}!`;
-const drawMessage = () => `Draw!`;
-const currentPlayerTurn = () => `Current turn by player: ${currentPlayer}.`;
+const winningMessage = () => `Winner: Player ${currentPlayer}!`;
+const drawMessage = () => `It's a draw!`;
+const currentPlayerTurn = () => `It's Player ${currentPlayer}'s turn`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
@@ -43,7 +43,7 @@ function handleResultValidation() {
         }
         if (a === b && b === c) {
             roundWon = true;
-            break
+            break;
         }
     }
 
@@ -83,8 +83,7 @@ function handleRestartGame() {
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-}
-
+}  
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
