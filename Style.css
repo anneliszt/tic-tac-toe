@@ -32,6 +32,8 @@ body {
     padding: 50px;
     border-radius: 30px;
     margin-bottom: 50px;
+    font-size: 30px;
+    font-family: 'Poppins';
 }
 
 .cell {
@@ -42,7 +44,7 @@ body {
     height: 100px;
     cursor: pointer;
     font-size: 60px;
-	font-family: "Permanent Marker", cursive;
+    font-family: "Poppins", cursive;
 }
 
 .cell:hover {
