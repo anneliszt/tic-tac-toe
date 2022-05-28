@@ -11,8 +11,8 @@
 }
 
 body {
+    background-image: url(img/bg.png);
     background-color: var(--backgroundColor);
-    color: black;
     margin-left: 0;
 }
 
@@ -91,7 +91,7 @@ body {
 .game {
     display: flex;
     justify-content: flex-start;
-    column-gap: 100px;
+    column-gap: 40px;
 }
 
 .players {
@@ -114,4 +114,16 @@ body {
     display: flex;
     align-items: center;
     margin-right: 40px;
+}
+
+.mechanics {
+    color: var(--textColor);
+    margin-right:40px
+}
+
+.mechanics h2 {
+    background-color: var(--darkerBGColor);
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
 }
