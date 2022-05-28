@@ -42,6 +42,15 @@ function handleResultValidation() {
             continue;
         }
         if (a === b && b === c) {
+            //change color for winning cells
+            document.querySelectorAll('.cell').forEach(
+                function (cell) {
+                    const cellIndex = parseInt(cell.getAttribute('data-cell-index'));
+                    if (winCondition.includes(cellIndex)) {
+                        cell.style.backgroundColor = "red";
+                    };
+                }
+            );
             roundWon = true;
             break;
         }
@@ -83,8 +92,7 @@ function handleRestartGame() {
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-}  
+}
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
- 
